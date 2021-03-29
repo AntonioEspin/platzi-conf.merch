@@ -3,6 +3,8 @@ import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api';
 
 const Map = ({data}) => {
 
+  const KEY = process.env.KEY
+
   const mapStyles = {
     height: '50vh',
     width: '100%'
@@ -13,7 +15,7 @@ const Map = ({data}) => {
   }
 
   return (
-    <LoadScript googleMapsApiKey='AIzaSyC21wizlKhPwJomR5l-sFKLE83SlKjqrkQ'>
+    <LoadScript googleMapsApiKey={KEY}>
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={9}
